@@ -1,0 +1,26 @@
+\documentclass[a4paper,12pt]{report}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{bsumain}
+
+\begin{document}
+    \section{Статистическое оценивание параметров многомерной линейной регрессии}
+
+    Строим оценки методом максимального правдоподобия
+    \[
+        A = (a_{ij}) = \sum_{\alpha = 1}^M z^\alpha (z^\alpha)^T = \sum_{\alpha = 1 }^M
+        \begin{pmatrix}
+            z_{1}^\alpha z_{1}^\alpha & z_{1}^\alpha z_{2}^\alpha & \cdots & z_{1}^\alpha z_{n}^\alpha\\
+            z_{2}^\alpha z_{2}^\alpha & z_{2}^\alpha z_{2}^\alpha & \cdots & z_{2}^\alpha z_{n}^\alpha\\
+            \vdots  & \vdots  & \ddots & \vdots  \\
+            z_{n}^\alpha z_{1}^\alpha & z_{n}^\alpha z_{2}^\alpha & \cdots & z_{n}^\alpha z_{n}^\alpha\\
+ \end{pmatrix}
+    \]
+
+    \[ C = (c_{ij}) = \sum_{\alpha = 1}^M x^\alpha (z^\alpha)^T \]
+\end{document}
+

@@ -1,3 +1,9 @@
+\newcommand{\course}{ _ }
+\newcommand{\group} { _ }
+\newcommand{\department} {Кафедра математического моделирования и анализа данных}
+\newcommand{\mentor} {Your mentor here}
+\newcommand{\jobtitle} {Your title here}
+
 \renewcommand{\maketitle}
 {
 \begin{titlepage}
@@ -16,7 +22,7 @@
         \end{center}
 
         \begin{center}
-            Кафедра математического моделирования и анализа данных
+            \department
         \end{center}
     \end{normalsize}
 
@@ -28,13 +34,13 @@
     \bigskip
 
     \begin{center}
-        {\bf ОБРАБОТКА ИЗОБРАЖЕНИЙ. ВЕЙВЛЕТ ХААРА.}
+        {\bf \jobtitle}
     \end{center}
     \vspace{4em}
 
     \begin{center}
         Курсовой проект\linebreak
-        студента 3 курса 7 группы
+        студента \course курса \group группы
     \end{center}
 
     \vspace{4em}
@@ -44,13 +50,13 @@
     {\small ''Допустить к защите''} & {\bf\small Научный руководитель}\\
     {\small{\bf Руководитель проекта}} & {\small \mentor}\\
     \begin{picture}(140,15)\put(0, 0){\line(1,0){140}}\end{picture}& {\small доцент кафедры ММАД} \\
-    \begin{picture}(140,15)\put(0,0){``\line(1,0){20}''\quad\put(0,0){\line(1,0){70}{\small~ 2012 г}}}\end{picture} & {\small канд. физ.-мат. наук}\\
+    \begin{picture}(140,15)\put(0,0){``\line(1,0){20}''\quad\put(0,0){\line(1,0){70}{\small~ \the\year г}}}\end{picture} & {\small канд. физ.-мат. наук}\\
     \end{tabular}
 
     \vfill
 
     \begin{center}
-    \bf{МИНСК 2012}
+    \bf{МИНСК \the\year}
     \end{center}
 \end{titlepage}
 }

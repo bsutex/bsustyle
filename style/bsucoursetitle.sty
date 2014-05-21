@@ -1,0 +1,71 @@
+
+\newcommand*{\jobtitle}[1]{\gdef\@jobtitle{#1}}
+\newcommand*{\@jobtitle}{}
+
+\newcommand*{\course}[1]{\gdef\@course{#1}}
+\newcommand*{\@course}{}
+
+\newcommand*{\group}[1]{\gdef\@group{#1}}
+\newcommand*{\@group}{}
+
+
+\newcommand*{\mentor}[1]{\gdef\@mentor{#1}}
+\newcommand*{\@mentor}{}
+
+
+\renewcommand{\maketitle}
+{
+\begin{titlepage}
+    \thispagestyle{empty}
+    \begin{normalsize}
+        \begin{center}
+            {\bf МИНИСТЕРСТВО ОБРАЗОВАНИЯ РЕСПУБЛИКИ БЕЛАРУСЬ}
+        \end{center}
+
+        \begin{center}
+            {\bf БЕЛОРУССКИЙ ГОСУДАРСТВЕННЫЙ УНИВЕРСИТЕТ}
+        \end{center}
+
+        \begin{center}
+            {\bf Факультет прикладной математики и информатики}
+        \end{center}
+
+        \begin{center}
+            Кафедра математического моделирования и анализа данных
+        \end{center}
+    \end{normalsize}
+
+    \vspace{5em}
+    \begin{center}
+        {\bf \@author}
+    \end{center}
+
+    \bigskip
+
+    \begin{center}
+        {\bf \@jobtitle}
+    \end{center}
+    \vspace{4em}
+
+    \begin{center}
+        Курсовая работа\linebreak
+        студента \@course курса \@group группы
+    \end{center}
+
+    \vspace{4em}
+
+    \linespread{1.0}
+    \begin{tabular}{@{}p{12cm}@{}p{5cm}}
+    {\small ''Допустить к защите''} & {\bf\small Научный руководитель}\\
+    {\small{\bf }} & {\small \@mentor}\\
+    \begin{picture}(140,15)\put(0, 0){\line(1,0){140}}\end{picture}& {\small доцент кафедры ММАД} \\
+    \begin{picture}(140,15)\put(0,0){``\line(1,0){20}''\quad\put(0,0){\line(1,0){70}{\small~ \the\year г}}}\end{picture} & {\small канд. физ.-мат. наук}\\
+    \end{tabular}
+
+    \vfill
+
+    \begin{center}
+    \bf{МИНСК \the\year}
+    \end{center}
+\end{titlepage}
+}

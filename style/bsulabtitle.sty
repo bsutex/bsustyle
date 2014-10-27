@@ -14,8 +14,6 @@
 \newcommand*{\authorinfo}[1]{\gdef\@authorinfo{#1}}
 \newcommand*{\@authorinfo}{}
 
-
-
 \renewcommand{\maketitle}
 {
 \begin{titlepage}
@@ -56,6 +54,13 @@
     \@teacherinfo
 
   \end{flushright}
+  \vspace{2em}
+  \begin{flushleft}
+    Работа сдана \line(1,0){100} \the\year г. \\
+    зачтена \line(1,0){100} \the\year г. \\
+
+    \textbf{Руководитель работы \\ \line(1,0){200}}
+  \end{flushleft}
 
   \vfill
 

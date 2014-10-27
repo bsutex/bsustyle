@@ -1,6 +1,9 @@
 \newcommand*{\teacher}[1]{\gdef\@teacher{#1}}
 \newcommand*{\@teacher}{}
 
+\newcommand*{\teacherinfo}[1]{\gdef\@teacherinfo{#1}}
+\newcommand*{\@teacherinfo}{}
+
 \newcommand*{\subject}[1]{\gdef\@subject{#1}}
 \newcommand*{\@subject}{}
 
@@ -31,11 +34,10 @@
   \vspace{10em}
 
   \begin{center}
-    \LARGE\textbf {\@author}
-    \linebreak
-
-    \LARGE\textbf{\@title}
-    \linebreak
+    \LARGE\textbf {\@author} \\
+    \vspace{1em}
+    \LARGE\textbf{\@title} \\
+    \vspace{1em}
     Отчет по лабораторной работе
     \linebreak
     (``\@subject'')
@@ -51,6 +53,7 @@
 
     \textbf{Преподаватель} \\
     \textit{\@teacher} \\
+    \@teacherinfo
 
   \end{flushright}
 

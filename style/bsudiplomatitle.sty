@@ -4,8 +4,9 @@
 \newcommand*{\subfaculty}[1]{\gdef\@subfaculty{#1}}
 \newcommand*{\@subfaculty}{}
 
-\newcommnad*{\reviewer}[1]{\gdef\@reviewer{#1}}
+\newcommand*{\reviewer}[1]{\gdef\@reviewer{#1}}
 \newcommand*{\@reviewer}{}
+
 
 \renewcommand{\maketitle}
 {
@@ -39,14 +40,14 @@
     \vspace{1em}
 
     \textbf{Научный руководитель} \\
-    \textit{\@teacher}
+    \textit{\@mentor}
 
   \end{flushright}
 
   \vspace{2em}
 
   \begin{flushleft}
-    Допущена к защите
+    Допущена к защите \\
     ``\line(1,0){10}''\line(1,0){100} \the\year г. \\
     \@reviewer
   \end{flushleft}

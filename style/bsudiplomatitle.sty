@@ -1,1 +1,60 @@
-bsudiplomatitle.sty
+\newcommand*{\mentor}[1]{\gdef\@mentor{#1}}
+\newcommand*{\@mentor}{}
+
+\newcommand*{\subfaculty}[1]{\gdef\@subfaculty{#1}}
+\newcommand*{\@subfaculty}{}
+
+\newcommnad*{\reviewer}[1]{\gdef\@reviewer{#1}}
+\newcommand*{\@reviewer}{}
+
+\renewcommand{\maketitle}
+{
+\begin{titlepage}
+  \begin{center}
+  \textbf{
+    \Large{МИНИСТЕРСТО ОБРАЗОВАНИЯ РЕСПУБЛИКИ БЕЛАРУСЬ}\\
+    \vspace{1em}
+    \Large{БЕЛОРУССКИЙ ГОСУДАРСТВЕННЫЙ УНИВЕРСИТЕТ\\
+    \vspace{0.5em}
+    ФАКУЛЬТЕТ ПРИКЛАДНОЙ МАТЕМАТИКИ И ИНФОРМАТИКИ}\\
+    \vspace{1em}
+    \@subfaculty
+  }
+  \end{center}
+
+  \vspace{10em}
+
+  \begin{center}
+    \LARGE\textbf {\@author} \\
+    \vspace{1em}
+    \LARGE\textbf{\@title} \\
+    \vspace{2em}
+    Дипломная работа.
+  \end{center}
+
+  \vspace{3em}
+
+  \begin{flushright}
+
+    \vspace{1em}
+
+    \textbf{Научный руководитель} \\
+    \textit{\@teacher}
+
+  \end{flushright}
+
+  \vspace{2em}
+
+  \begin{flushleft}
+    Допущена к защите
+    ``\line(1,0){10}''\line(1,0){100} \the\year г. \\
+    \@reviewer
+  \end{flushleft}
+
+  \vfill
+
+  \begin{center}
+    Минск, \the\year
+  \end{center}
+\end{titlepage}
+}

@@ -123,47 +123,61 @@ literate={а}{{\selectfont\char224}}1
 
 \setlength{\textheight}{25.7cm}% 29.7cm-2cm(верхнее поле)-2cm(нижнее поле)=25.7cm;
 
-%Оформление глав, разделов и т.д.
-\makeatletter%
+% Оформление глав, разделов и т.д.
+\makeatletter
 
-%не подавлять абзацный отступ в главах
-\renewcommand{\chapter}{\cleardoublepage\thispagestyle{plain}%
+% Не подавлять абзацный отступ в главах
+\renewcommand{\chapter}{\cleardoublepage\thispagestyle{plain}
 \global\@topnum=0 \@afterindenttrue \secdef\@chapter\@schapter}
 
-%оформление нумерованных глав
-\renewcommand{\@makechapterhead}[1]{%Начало макроопределения
-\vspace*{50pt}%Пустое место вверху страницы
-{\parindent=18pt \normalfont\Large\bfseries
-\thechapter{} %номер главы
-\normalfont\Large\bfseries #1 \par %заголовок от текста
-\nopagebreak %чтоб не оторвать заголовок от текста
-\vspace{40 pt} %между заголовком и текстом
-}%конец группы
-}%коней макроопределения
+% Оформление нумерованных глав
+\renewcommand{\@makechapterhead}[1] { % Начало макроопределения
+  \vspace*{50pt} % Пустое место вверху страницы
+  {
+  	\parindent=18pt \normalfont\Large\bfseries
+  	\thechapter{} % Номер главы
+  	\normalfont\Large\bfseries #1 \par % Заголовок от текста
+  	\nopagebreak % Не отрываем заголовок от текста
+  	\vspace{40 pt} % Пустое место между заголовком и текстом
+  } % конец группы
+}% Конец макроопределения
 
-%оформление ненумерованных глав
-\renewcommand{\@makeschapterhead}[1]{%Начало макроопределения
-\vspace*{50pt}%Пустое место вверху страницы
-{\parindent=18pt \normalfont\Large\bfseries #1 \par %заголовок от текста
-\nopagebreak %чтоб не оторвать заголовок от текста
-\vspace{40pt} %между заголовком и текстом
-}%конец группы
-}%коней макроопределения
+% Оформление ненумерованных глав
+\renewcommand{\@makeschapterhead}[1] { % Начало макроопределения
+  \vspace*{50pt} % Пустое место вверху страницы
+  {
+    \parindent=18pt \normalfont\Large\bfseries #1 \par %заголовок от текста
+    \nopagebreak %чтоб не оторвать заголовок от текста
+    \vspace{40pt} %между заголовком и текстом
+  }% Конец группы
+} % Конец макроопределения
 
-%оформление разделов
-\renewcommand{\section}{\@startsection{section}{1}{18pt}%
-{3.5ex plus 1ex minus .2ex}{2.3ex plus .2ex}%
-{\normalfont\Large\bfseries\raggedright}}%
+% Оформление разделов
+\renewcommand{\section} {
+	\@startsection{section}
+	              {1}
+	              {18pt}
+	              {3.5ex plus 1ex minus .2ex}
+	              {2.3ex plus .2ex}
+	              {\normalfont\Large\bfseries\raggedright}
+}
 
-%оформление подразделов
-\renewcommand{\subsection}{\@startsection{subsection}{2}{18pt}%
-{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}%
-{\normalfont\large\bfseries\raggedright}}%
+% Оформление подразделов
+\renewcommand{\subsection}{
+  \@startsection{subsection}
+                {2}
+                {18pt}
+                {3.25ex plus 1ex minus .2ex}
+                {1.5ex plus .2ex}
+                {\normalfont\large\bfseries\raggedright}
+}
 
-%оформление подподразделов
-\renewcommand{\subsubsection}{\@startsection{subsubsection}{3}{18pt}%
-{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}%
-{\normalfont\large\bfseries\raggedright}}%
+% Оформление подподразделов
+\renewcommand{\subsubsection}{
+  \@startsection{subsubsection}{3}{18pt}
+                {3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+                {\normalfont\large\bfseries\raggedright}
+}
 
 %оформление библиографии
 \renewcommand{\@biblabel}[1]{#1.}

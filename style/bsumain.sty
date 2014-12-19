@@ -16,7 +16,12 @@
 
 \usepackage{listings}
 \renewcommand\lstlistingname{Листинг}
-%\renewcommand{\thelstlisting}{\arabic{lstlisting}}
+
+\renewcommand{\appendix}{
+  \renewcommand{\chaptername}{Приложение}
+  \setcounter{chapter}{0}
+  \renewcommand{\thechapter}{\Asbuk{chapter}}
+}
 
 
 % Злостный мегакостыль для поддержки кириллицы в листингах
@@ -136,7 +141,7 @@ literate={а}{{\selectfont\char224}}1
   {
   	\parindent=18pt
     \normalfont\Large\bfseries
-  	Глава \thechapter{} \par % Номер главы
+  	\chaptername ~ \thechapter{} \par % Номер главы
   	#1 \par % Заголовок текста с новой строки
   	\nopagebreak % Не отрываем заголовок от текста
   	\vspace{40 pt} % Пустое место между заголовком и текстом

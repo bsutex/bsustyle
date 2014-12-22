@@ -32,3 +32,5 @@
 *.tdo
 *.pdf
 
+
+example/**/*.sty

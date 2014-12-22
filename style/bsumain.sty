@@ -137,14 +137,15 @@ literate={а}{{\selectfont\char224}}1
 
 % Оформление нумерованных глав
 \renewcommand{\@makechapterhead}[1] { % Начало макроопределения
-  \vspace*{50pt} % Пустое место вверху страницы
+  \vspace{36pt} % Пустое место вверху страницы
   {
+    \centering
   	\parindent=18pt
     \normalfont\Large\bfseries
   	\chaptername ~ \thechapter{} \par % Номер главы
   	#1 \par % Заголовок текста с новой строки
   	\nopagebreak % Не отрываем заголовок от текста
-  	\vspace{40 pt} % Пустое место между заголовком и текстом
+  	\vspace{36pt} % Пустое место между заголовком и текстом
   } % конец группы
 }% Конец макроопределения
 

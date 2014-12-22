@@ -14,14 +14,30 @@
 
 \begin{document}
   \maketitle
-  \chapter{Нумерованная глава}
-  \label{c:num_chap}
+
+  {
+    \renewcommand{\contentsname}{Содержание}
+    \tableofcontents
+  }
+
+  \chapter{Первая нумерованная глава}
+  \label{c:first_num_chap}
   \lipsum
-  \section{Нумерованный раздел}
-  \label{s:num_sec}
+  \section{Первый нумерованный раздел}
+  \label{s:first_num_sec}
   \lipsum
-  \subsection{Нумерованный подраздел}
-  \label{ss:num_subsec}
+  \subsection{Первый нумерованный подраздел}
+  \label{ss:first_num_subsec}
+  \lipsum
+
+  \chapter{Вторая нумерованная глава}
+  \label{c:second_num_chap}
+  \lipsum
+  \section{Второй нумерованный раздел}
+  \label{s:second_num_sec}
+  \lipsum
+  \subsection{Второй нумерованный подраздел}
+  \label{ss:second_num_subsec}
   \lipsum
 
   \appendix

@@ -132,11 +132,13 @@ literate={а}{{\selectfont\char224}}1
 \makeatletter
 
 % Не подавлять абзацный отступ в главах
-\renewcommand{\chapter}{\cleardoublepage\thispagestyle{plain}
-\global\@topnum=0 \@afterindenttrue \secdef\@chapter\@schapter}
+\renewcommand{\chapter} {
+  \cleardoublepage\thispagestyle{plain}
+  \global\@topnum=0 \@afterindenttrue \secdef\@chapter\@schapter
+}
 
 % Оформление нумерованных глав
-\renewcommand{\@makechapterhead}[1] { % Начало макроопределения
+\renewcommand{\@makechapterhead}[1] {
   \vspace{36pt} % Пустое место вверху страницы
   {
     \centering
@@ -147,17 +149,17 @@ literate={а}{{\selectfont\char224}}1
   	\nopagebreak % Не отрываем заголовок от текста
   	\vspace{36pt} % Пустое место между заголовком и текстом
   } % конец группы
-}% Конец макроопределения
+}
 
 % Оформление ненумерованных глав
-\renewcommand{\@makeschapterhead}[1] { % Начало макроопределения
+\renewcommand{\@makeschapterhead}[1] {
   \vspace*{50pt} % Пустое место вверху страницы
   {
     \parindent=18pt \normalfont\Large\bfseries #1 \par %заголовок от текста
     \nopagebreak %чтоб не оторвать заголовок от текста
     \vspace{40pt} %между заголовком и текстом
   }% Конец группы
-} % Конец макроопределения
+}
 
 % Оформление разделов
 \renewcommand{\section} {

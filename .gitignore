@@ -34,3 +34,5 @@
 
 
 example/**/*.sty
+.Rproj.user
+**/*.kint.md

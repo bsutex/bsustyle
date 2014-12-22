@@ -1,0 +1,28 @@
+---
+bibliography: references.bib
+csl: tex/citations.csl
+---
+# Hello
+
+\lipsum
+
+# Hello includes
+
+
+Referencing. Kind of [@haar][@daub]
+```{r, child='rmd/part_foo.Rmd'}
+
+```
+
+# Hello includes. Part 2
+```{r, child='rmd/part_bar.Rmd'}
+
+```
+
+
+\appendix
+
+# Do application things
+\lipsum[1]
+
+# Ссылки

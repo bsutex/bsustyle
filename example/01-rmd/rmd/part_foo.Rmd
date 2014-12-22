@@ -1,0 +1,19 @@
+
+## Include code
+
+```{r}
+    # Define some function
+
+    some.function <- function(n){
+        replicate(n, runif(1))
+    }
+```
+
+\blindmathpaper
+
+```{r}
+    t <- runif(1000) * 2 * pi
+    plot(t, sin(t), type='l')
+```
+
+\blindmathpaper

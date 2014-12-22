@@ -1,0 +1,15 @@
+output:
+  pdf_document:
+    keep_tex: true
+    toc: on
+    number_sections: on
+    pandoc_args: [
+        '--listings',
+        '--variable', 'documentclass:report',
+        '--variable', 'classoption:a4papper,11pt',
+        '--variable', 'geometry:margin=0in'
+        ]
+    fig_height: 4
+    fig_caption: on
+    includes:
+      in_header: tex/header.tex

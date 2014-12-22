@@ -148,17 +148,18 @@ literate={а}{{\selectfont\char224}}1
   	#1 \par % Заголовок текста с новой строки
   	\nopagebreak % Не отрываем заголовок от текста
   	\vspace{36pt} % Пустое место между заголовком и текстом
-  } % конец группы
+  }
 }
 
 % Оформление ненумерованных глав
 \renewcommand{\@makeschapterhead}[1] {
   \vspace*{50pt} % Пустое место вверху страницы
   {
-    \parindent=18pt \normalfont\Large\bfseries #1 \par %заголовок от текста
-    \nopagebreak %чтоб не оторвать заголовок от текста
-    \vspace{40pt} %между заголовком и текстом
-  }% Конец группы
+    \parindent=18pt
+    \normalfont\Large\bfseries #1 \par
+    \nopagebreak % чтобы не оторвать заголовок от текста
+    \vspace{40pt} % между заголовком и текстом
+  }
 }
 
 % Оформление разделов
@@ -172,7 +173,7 @@ literate={а}{{\selectfont\char224}}1
 }
 
 % Оформление подразделов
-\renewcommand{\subsection}{
+\renewcommand{\subsection} {
   \@startsection{subsection}
                 {2}
                 {18pt}
@@ -182,9 +183,12 @@ literate={а}{{\selectfont\char224}}1
 }
 
 % Оформление подподразделов
-\renewcommand{\subsubsection}{
-  \@startsection{subsubsection}{3}{18pt}
-                {3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+\renewcommand{\subsubsection} {
+  \@startsection{subsubsection}
+                {3}
+                {18pt}
+                {3.25ex plus 1ex minus .2ex}
+                {1.5ex plus .2ex}
                 {\normalfont\large\bfseries\raggedright}
 }
 

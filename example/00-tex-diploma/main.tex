@@ -2,33 +2,52 @@
 
 \usepackage{../../style/bsumain}
 \usepackage{../../style/bsudiplomatitle}
-\usepackage{lipsum}
+\usepackage{blindtext}
 
 
 \title{О проволочках из супреструн}
 \author{Иванов Иван Иванович}
 \mentor{Петров Петр Петрович \\
-доцент кафедры ОЙО}
+        доцент кафедры ОЙО}
 \reviewer{Сергеев Сергей Сергеевич \\
-заведующий каведры ОЙО}
+          заведующий каведры ОЙО}
 
 \begin{document}
   \maketitle
-  \chapter{Нумерованная глава}
-  \label{c:num_chap}
-  \lipsum
-  \section{Нумерованный раздел}
-  \label{s:num_sec}
-  \lipsum
-  \subsection{Нумерованный подраздел}
-  \label{ss:num_subsec}
-  \lipsum
+
+  {
+    \renewcommand{\contentsname}{Содержание}
+    \tableofcontents
+  }
+
+  \chapter{Первая нумерованная глава}
+  \label{c:first_num_chap}
+
+  \section{Первый нумерованный раздел}
+  \label{s:first_num_sec}
+  \blindmathpaper
+  \subsection{Первый нумерованный подраздел}
+  \label{ss:first_num_subsec}
+  \blindmathpaper
+
+  \chapter{Вторая нумерованная глава}
+  \label{c:second_num_chap}
+  \blindmathpaper
+  \section{Второй нумерованный раздел}
+  \label{s:second_num_sec}
+  \blindmathpaper
+  \subsection{Второй нумерованный подраздел}
+  \label{ss:second_num_subsec}
+  \blindmathpaper
 
   \appendix
   \chapter{Один}
-  \lipsum
+  \blindmathpaper
   \chapter{Два}
-  \lipsum
+  \blindmathpaper
   \chapter{Три}
-  \lipsum
+  \blindmathpaper
+
+  \lstinputlisting[language=R, caption=Исходный кот, label=lst:code]{code.R}
+
 \end{document}

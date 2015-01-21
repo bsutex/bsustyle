@@ -170,12 +170,12 @@
   \vspace{36pt} % Пустое место вверху страницы
   {
     \centering
-  	\parindent=18pt
+    \parindent=18pt
     \normalfont\Large\bfseries
-  	\chaptername ~ \thechapter{} \par % Номер главы
-  	#1 \par % Заголовок текста с новой строки
-  	\nopagebreak % Не отрываем заголовок от текста
-  	\vspace{36pt} % Пустое место между заголовком и текстом
+    \chaptername ~ \thechapter{} \par % Номер главы
+    #1 \par % Заголовок текста с новой строки
+    \nopagebreak % Не отрываем заголовок от текста
+    \vspace{36pt} % Пустое место между заголовком и текстом
   }
 }
 
@@ -183,6 +183,7 @@
 \renewcommand{\@makeschapterhead}[1] {
   \vspace*{50pt} % Пустое место вверху страницы
   {
+    \centering
     \parindent=18pt
     \normalfont\Large\bfseries #1 \par
     \nopagebreak % чтобы не оторвать заголовок от текста
@@ -192,12 +193,12 @@
 
 % Оформление разделов
 \renewcommand{\section} {
-	\@startsection{section}
-	              {1}
-	              {18pt}
-	              {3.5ex plus 1ex minus .2ex}
-	              {2.3ex plus .2ex}
-	              {\normalfont\Large\bfseries\raggedright}
+    \@startsection{section}
+                  {1}
+                  {18pt}
+                  {3.5ex plus 1ex minus .2ex}
+                  {2.3ex plus .2ex}
+                  {\normalfont\Large\bfseries\raggedright}
 }
 
 % Оформление подразделов

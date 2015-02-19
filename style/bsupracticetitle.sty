@@ -1,0 +1,66 @@
+\newcommand*{\mentor}[1]{\gdef\@mentor{#1}}
+\newcommand*{\@mentor}{}
+
+\newcommand*{\subfaculty}[1]{\gdef\@subfaculty{#1}}
+\newcommand*{\@subfaculty}{}
+
+\newcommand*{\supervisor}[1]{\gdef\@supervisor{#1}}
+\newcommand*{\@supervisor}{}
+
+
+\renewcommand{\maketitle}
+{
+\begin{titlepage}
+  \begin{center}
+  \textbf{
+    МИНИСТЕРСТВО ОБРАЗОВАНИЯ РЕСПУБЛИКИ БЕЛАРУСЬ\\
+    \vspace{1em}
+    БЕЛОРУССКИЙ ГОСУДАРСТВЕННЫЙ УНИВЕРСИТЕТ\\
+    \vspace{1em}
+    ФАКУЛЬТЕТ ПРИКЛАДНОЙ МАТЕМАТИКИ И ИНФОРМАТИКИ\\
+    \vspace{1em}
+    \@subfaculty
+  }
+  \end{center}
+
+  \vspace{10em}
+
+  \begin{center}
+    \large\textbf {\@author} \\
+    \vspace{1em}
+    \large\textbf{\@title} \\
+    \vspace{2em}
+    Отчет о прохождении преддипломной практики
+  \end{center}
+
+  \vspace{3em}
+
+  \begin{flushright}
+    \begin{minipage}[H]{0.35\textwidth}
+      \begin{flushleft}
+        \textbf{Руководитель практики} \\
+        \textit{\@supervisor}
+        \line(1,0){150}
+      \end{flushleft}
+    \end{minipage}
+  \end{flushright}
+
+  \begin{flushright}
+    \begin{minipage}[H]{0.35\textwidth}
+      \begin{flushleft}
+        \textbf{Научный руководитель} \\
+        \textit{\@mentor} \\
+        \line(1,0){150}
+      \end{flushleft}
+    \end{minipage}
+  \end{flushright}
+
+  \vspace{2em}
+
+  \vfill
+
+  \begin{center}
+    Минск, \the\year
+  \end{center}
+\end{titlepage}
+}

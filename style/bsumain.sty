@@ -1,10 +1,9 @@
-\ProvidesPackage{bsumain}
-% Поддержка русского и английского. В частности переносы
-\usepackage[english,russian]{babel}
 % Шрифты для отображения кириллических символов
 \usepackage[T1,T2A]{fontenc}
 % Входная кодировка utf-8
 \usepackage[utf8]{inputenc}
+% Поддержка русского и английского. В частности переносы
+\usepackage[english,russian]{babel}
 % AMS пакеты для отображения и форматирования математических формул.
 \usepackage{amssymb,amsthm,amsmath,amscd}
 % Пакет для вставки отбражений
@@ -19,10 +18,22 @@
 \usepackage{listings}
 \renewcommand\lstlistingname{Листинг}
 
-\renewcommand{\appendix}{
-  \renewcommand{\chaptername}{Приложение}
-  \setcounter{chapter}{0}
-  \renewcommand{\thechapter}{\Asbuk{chapter}}
+\renewcommand\appendixname{Приложение}
+\gdef\appendix{
+  \par
+  \setcounter{section}{0}
+  \setcounter{subsection}{0}
+  \def\thesection{\Asbuk{section}}
+  \def\section##1{
+    \refstepcounter{section}
+    \setcounter{table}{0}
+    \def\thetable{\Asbuk{section}.\arabic{table}}
+    \goodbreak\noindent{
+      \indent\Large\bf\hbox to 8.5em{\appendixname\ \thesection\hss}\hspace{0.8ex}##1
+    }
+    \nobreak\vspace{1em}\nobreak\noindent
+    \addcontentsline{toc}{chapter}{\hbox to 8.5em{\appendixname\ \thesection\hss}\hspace{0.8ex}##1}
+  }
 }
 
 % Листинг R
@@ -236,20 +247,20 @@
 \@float{figure}
 }%
 {%
-\addtocontents{lof}{ {\vskip 0.4em} }
+\addtocontents{lof}{ {\vskip 0.2em} }
 \end@float
 }
 
-%Оформление подписи таблицы
 \newcommand{\@makefigurecaption}[2]{%
 \vspace{\abovecaptionskip}%
-\sbox{\@tempboxa}{\large #1 --- \large #2}%
-\ifdim \wd\@tempboxa >\hsize {\center\hyphenpenalty=10000\large #1 --- \large #2 \par}%
+\sbox{\@tempboxa}{\normalsize #1 --- \normalsize #2}%
+\ifdim \wd\@tempboxa >\hsize {\center\hyphenpenalty=10000\normalsize #1 --- \normalsize #2 \par}%
 \else \global\@minipagefalse \hbox to \hsize
-{\hfil \hyphenpenalty=10000 \large #1 --- \large #2\hfil}%
+{\hfil \hyphenpenalty=10000 \normalsize #1 --- \normalsize #2\hfil}%
 \fi \vspace{\belowcaptionskip}}
 
 
+%Оформление подписи таблицы
 \renewcommand{\thetable}{\@arabic\c@table}
 %чтобы номер таблицы содержал номер главы (например, таблица 2.1) надо закомментировать предыдущую строку
 \renewenvironment{table}{%
@@ -269,7 +280,7 @@
 \setlength\tableparindent{18\p@}
 \newcommand{\@maketablecaption}[2]{
   \vskip\abovetablecaptionskip
-  \hskip\tableparindent \large #1~---\ \large #2\par
+  \hskip\tableparindent \normalsize #1~---\ \normalsize #2\par
   \vskip\belowtablecaptionskip
 }
 

@@ -28,6 +28,7 @@
     \refstepcounter{section}
     \setcounter{table}{0}
     \def\thetable{\Asbuk{section}.\arabic{table}}
+    \def\thefigure{\Asbuk{section}.\arabic{figure}}
     \goodbreak\noindent{
       \indent\Large\bf\hbox to 8.5em{\appendixname\ \thesection\hss}\hspace{0.8ex}##1
     }
@@ -192,13 +193,13 @@
 
 % Оформление ненумерованных глав
 \renewcommand{\@makeschapterhead}[1] {
-  \vspace*{36pt} % Пустое место вверху страницы
+  \vspace{36pt} % Пустое место вверху страницы
   {
     \centering
     \parindent=18pt
     \normalfont\Large\bfseries #1 \par
     \nopagebreak % чтобы не оторвать заголовок от текста
-    \vspace{40pt} % между заголовком и текстом
+    \vspace{25pt} % между заголовком и текстом
   }
 }
 
@@ -236,7 +237,6 @@
 \bibliographystyle{unsrt}
 \renewcommand{\@biblabel}[1]{#1.}
 
-\addto\captionsrussian{\renewcommand\figurename{Рисунок}}
 \addto\captionsrussian{\renewcommand\figurename{Рисунок}}
 
 %Оформление подписи рисунка

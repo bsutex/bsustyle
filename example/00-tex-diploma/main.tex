@@ -1,7 +1,10 @@
-\documentclass[a4paper,10pt]{report}
+\documentclass[a4paper,14pt]{extreport}
+
+\usepackage[T1,T2A]{fontenc}
+\usepackage[utf8]{inputenc}
 
 \usepackage{../../style/bsumain}
-\usepackage{../../style/bsudiplomatitle}
+\usepackage{../../style/bsudiplomatitle14}
 \usepackage{blindtext}
 
 
@@ -41,11 +44,11 @@
   \blindmathpaper
 
   \appendix
-  \chapter{Один}
+  \section{Один}
   \blindmathpaper
-  \chapter{Два}
+  \section{Два}
   \blindmathpaper
-  \chapter{Три}
+  \section{Три}
   \blindmathpaper
 
   \lstinputlisting[language=R, caption=Исходный кот, label=lst:code]{code.R}

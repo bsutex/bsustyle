@@ -1,0 +1,107 @@
+% BSU Beamer Theme
+% Made by Hanna Rudakouskaya using sources from Danil Fedorovykh (http://hse.ru/staff/df)
+% Initial source http://www.hse.ru/info/logo
+% Version 0.1
+% 1st June 2015
+
+%%% Loading packages useful for typesetting our slides
+\usepackage{wrapfig}
+\usepackage{xcolor}
+\usepackage{etoolbox}
+\usepackage{hyperref} 
+
+\ProvidesPackage{beamerthemeBSU}[2015/06/01] % Defines the theme BSU
+
+\usefonttheme{default} % Font theme
+
+\setbeamertemplate{navigation symbols}{}    % Comment out to show nav. bar
+\setbeamertemplate{itemize items}[circle]   % Style of bullet points
+\setbeamertemplate{theorems}[numbered]     % Number objects such as theorems and definitions
+
+\definecolor{BSUblue}{cmyk}{1,0.81,0.07,0.32}
+\definecolor{BSUlightblue}{cmyk}{0.82,0.44,0.05,0}
+\definecolor{BSUlightlightblue}{cmyk}{0.44,0.06,0.2,0}
+\definecolor{BSUlightbrown}{cmyk}{0.09,0.13,0.35,0}
+\setbeamercolor{WhiteOnBlue}{bg=BSUblue,fg=white} % White on BSU blue color
+\setbeamercolor{BlueOnWhite}{fg=BSUblue,bg=white} % BSU blue color on White
+
+\usepackage{hyperref}
+\hypersetup{
+    unicode=true,          % non-Latin characters in Acrobat’s bookmarks
+    colorlinks=true,       % false: boxed links; true: colored links
+    linkcolor=BSUblue,       % color of internal links (change box color with linkbordercolor)
+    citecolor=BSUblue,     % color of links to bibliography
+    filecolor=BSUblue,     % color of file links
+    urlcolor=BSUblue       % color of external links
+}
+
+%%% Set color of different objects (see Beamer User Guide for more info)
+\usecolortheme[named=BSUblue]{structure}
+\setbeamercolor{background canvas}{bg=white}
+\setbeamercolor{frametitle}{bg=BSUblue}
+\setbeamercolor{frametitle}{fg=white}
+\setbeamercolor{headline}{bg=BSUblue}
+\setbeamercolor{alerted text}{fg=BSUlightbrown}
+\setbeamercolor{itemize item}{fg=BSUblue}
+\setbeamercolor{itemize subitem}{fg=BSUblue}
+\setbeamercolor{itemize subsubitem}{fg=BSUblue}
+\setbeamercolor{block title example}{fg=BSUlightlightblue}
+\AtBeginEnvironment{exampleblock}{
+    \setbeamercolor{itemize item}{fg=BSUlightlightblue}
+    \setbeamercolor{itemize subitem}{fg=BSUlightlightblue}
+    \setbeamercolor{itemize subsubitem}{fg=BSUlightlightblue}
+                                 }
+\setbeamercolor{palette primary}{bg=BSUblue}
+\setbeamercolor{palette primary}{fg=white}
+\setbeamercolor{palette secondary}{bg=BSUblue}
+\setbeamercolor{palette secondary}{fg=white}
+\setbeamercolor{palette tertiary}{bg=BSUblue}
+\setbeamercolor{palette tertiary}{fg=white}
+
+%%% Layout issues
+\setbeamertemplate{headline}[default]{} % Empty headline
+\setbeamertemplate{frametitle} % Frametitle with logo
+{
+    \nointerlineskip
+    \begin{beamercolorbox}[sep=0.3cm,wd=\paperwidth]{frametitle}
+		\vbox{}\vskip-0.7ex% 
+		\begin{wrapfigure}{r}{0.24\textwidth}
+			\vskip-3ex\includegraphics[width=0.22\textwidth]{bsulogo/BSU-small-by}
+ 		\end{wrapfigure}
+ 		\strut\insertframetitle
+
+ 		\small\strut\insertframesubtitle
+		\vskip-1ex%
+    \end{beamercolorbox}
+}
+
+\makeatletter
+\setbeamertemplate{footline} % Footline
+{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.25\paperwidth,ht=2ex,dp=1ex,center]{WhiteOnBlue}%
+    \usebeamerfont{author in head/foot}\insertshortinstitute
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.5\paperwidth,ht=2ex,dp=1ex,center]{WhiteOnBlue}%
+    \usebeamerfont{title in head/foot}\insertshortauthor
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.25\paperwidth,ht=2ex,dp=1ex,right]{WhiteOnBlue}%
+    \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
+    \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+\makeatother
+
+\addtobeamertemplate{title page}{%
+  \leavevmode%
+  \vspace{-.23cm}
+  \hbox{%
+    \begin{beamercolorbox}[wd=\paperwidth,ht=0.25\paperheight]{BlueOnWhite}
+      \begin{center}
+        \includegraphics[height=0.2\paperheight]{bsulogo/BSU-main-by} 
+        \vspace{-0.025\paperheight}
+      \end{center}
+   \end{beamercolorbox}}
+}{\vspace{3cm}}

@@ -1,0 +1,59 @@
+\newcommand*{\sectionnum}[1]{\gdef\@sectionnum{#1}}
+\newcommand*{\@sectionnum}{}
+
+\newcommand*{\sectionname}[1]{\gdef\@sectionname{#1}}
+\newcommand*{\@sectionname}{}
+
+\newcommand*{\participant}[1]{\gdef\@participant{#1}}
+\newcommand*{\@participant}{}
+
+\newcommand*{\mentor}[1]{\gdef\@mentor{#1}}
+\newcommand*{\@mentor}{}
+
+\renewcommand{\maketitle}
+{
+\begin{titlepage}
+  \begin{center}
+  \textbf{
+    МИНИСТЕРСТВО ОБРАЗОВАНИЯ РЕСПУБЛИКИ БЕЛАРУСЬ\\
+    \vspace{1em}
+    БЕЛОРУССКИЙ ГОСУДАРСТВЕННЫЙ УНИВЕРСИТЕТ\\
+  }
+  \end{center}
+  
+  \vspace{5em}
+  
+  \begin{center}
+    Республиканский конкурс научных работ студентов \\
+    \vspace{2em}
+    Секция \@sectionnum \\
+    \vspace{0.5em}
+    \@sectionname
+  \end{center}
+  
+  \vspace{5em}
+  
+  \begin{center}
+    \@title \\
+  \end{center}
+  
+  \vspace{5em}
+  
+  \begin{flushright}
+    \begin{minipage}[H]{0.4\textwidth}
+      \begin{flushleft}
+        \@participant \\
+        \vspace{2.5em}
+        Научный руководитель: \\
+        \@mentor
+      \end{flushleft}
+    \end{minipage}
+  \end{flushright}
+    
+  \vfill
+  
+  \begin{center}
+    Минск, \the\year
+  \end{center}
+\end{titlepage}
+}

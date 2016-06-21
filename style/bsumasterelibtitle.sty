@@ -1,0 +1,44 @@
+\newcommand*{\mentor}[1]{\gdef\@mentor{#1}}
+\newcommand*{\@mentor}{}
+
+\newcommand*{\subfaculty}[1]{\gdef\@subfaculty{#1}}
+\newcommand*{\@subfaculty}{}
+
+\newcommand*{\reviewer}[1]{\gdef\@reviewer{#1}}
+\newcommand*{\@reviewer}{}
+
+\newcommand*{\specialty}[1]{\gdef\@specialty{#1}}
+\newcommand*{\@specialty}{}
+
+\renewcommand{\maketitle}
+{
+\begin{titlepage}
+  \begin{center}
+  \textbf{
+    \small{БЕЛОРУССКИЙ ГОСУДАРСТВЕННЫЙ УНИВЕРСИТЕТ}\\
+    \vspace{1em}
+    \small{Факультет прикладной математики и информатики}\\
+    \vspace{1em}
+    \@subfaculty
+  }
+  \end{center}
+  
+  \vspace{5em}
+  
+  \begin{center}
+    Аннотация к магистерской диссертации \\
+    \vspace{1em}
+    \textbf{\@title} \\
+    \vspace{4em}
+    \@author \\
+    \vspace{5em}
+    Научный руководитель --- \@mentor
+  \end{center}
+  
+  \vfill
+  
+  \begin{center}
+    \the\year
+  \end{center}
+\end{titlepage}
+}

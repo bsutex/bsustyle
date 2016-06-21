@@ -1,0 +1,67 @@
+\newcommand*{\mentor}[1]{\gdef\@mentor{#1}}
+\newcommand*{\@mentor}{}
+
+\newcommand*{\subfaculty}[1]{\gdef\@subfaculty{#1}}
+\newcommand*{\@subfaculty}{}
+
+\newcommand*{\reviewer}[1]{\gdef\@reviewer{#1}}
+\newcommand*{\@reviewer}{}
+
+\newcommand*{\specialty}[1]{\gdef\@specialty{#1}}
+\newcommand*{\@specialty}{}
+
+\renewcommand{\maketitle}
+{
+\begin{titlepage}
+  \begin{center}
+  \textbf{
+    \small{МИНИСТЕРСТВО ОБРАЗОВАНИЯ РЕСПУБЛИКИ БЕЛАРУСЬ}\\
+    \vspace{0.5em}
+    \small{БЕЛОРУССКИЙ ГОСУДАРСТВЕННЫЙ УНИВЕРСИТЕТ}\\
+    \vspace{0.5em}
+    \small{ФАКУЛЬТЕТ ПРИКЛАДНОЙ МАТЕМАТИКИ И ИНФОРМАТИКИ}\\
+    \vspace{0.5em}
+    \@subfaculty
+  }
+  \end{center}
+  
+  \vspace{5em}
+  
+  \begin{center}
+    \@author \\
+    \vspace{2em}
+    \textbf{\@title} \\
+    \vspace{3em}
+    Магистерская диссертация \\
+    \vspace{2em}
+    специальность \@specialty
+  \end{center}
+  
+  \vspace{2.5em}
+  
+  \begin{flushright}
+    \begin{minipage}[H]{0.35\textwidth}
+      \begin{flushleft}
+        Научный руководитель: \\
+        \@mentor
+      \end{flushleft}
+    \end{minipage}
+  \end{flushright}
+
+  \vspace{1em}
+
+  \begin{flushleft}
+    Допущена к защите \\
+    \vspace{1em}
+    <<\line(1,0){20}>> \line(1,0){100} $ $ \the\year $ $ г. \\
+    \vspace{1em}
+    \@reviewer
+  \end{flushleft}
+  
+  \vfill
+  
+  \begin{center}
+    Минск, \the\year
+  \end{center}
+\end{titlepage}
+}
